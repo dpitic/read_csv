@@ -8,7 +8,7 @@ with open(sys.argv[1], newline='') as csvfile:
     rows = 0
     for row in csv_reader:
         draw, date_str, numbers = (row[0], row[1], row[2:8])
-        if int(draw) < 877:     # different rules before this time
+        if int(draw) < 878:     # different rules before this time
             break
         rows += 1
         for i in numbers:
