@@ -22,3 +22,18 @@ print('max = {}; number = {}'.format(maximum, n_max))
 minimum = min(freq)
 n_min = freq.index(minimum) + 1
 print('min = {}; number = {}'.format(minimum, n_min))
+# Convert to list of tuples
+lt = [(i+1, freq[i]) for i in range(len(freq))]
+print(lt)
+print('length = {}'.format(len(lt)))
+# Sort list of tuples by frequency
+slt = sorted(lt, key=lambda item: (item[1], item[0]), reverse=True)
+print(slt)
+print('length = {}'.format(len(slt)))
+# First six tuples
+first_six = [slt[i] for i in range(6)]
+# First six sorted by number
+sorted_highest = sorted(first_six, key=lambda item: (item[0], item[1]))
+print(sorted_highest)
+numbers = [i[0] for i in sorted_highest]
+print(numbers)
