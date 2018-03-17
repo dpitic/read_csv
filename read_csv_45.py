@@ -29,8 +29,9 @@ slt = sorted(lt, key=lambda item: (item[1], item[0]), reverse=True)
 print(slt)
 print('length = {}'.format(len(slt)))
 # First six tuples
-firstsix = [slt[i] for i in range(6)]
+first_six = [slt[i] for i in range(6)]
 # First six sorted by number
-sortedhighest = sorted(firstsix, key=lambda item: (item[0], item[1]))
-print(sortedhighest)
-
+sorted_highest = sorted(first_six, key=lambda item: (item[0], item[1]))
+print(sorted_highest)
+numbers = [i[0] for i in sorted_highest]
+print(numbers)
